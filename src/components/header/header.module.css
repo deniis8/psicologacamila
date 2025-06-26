@@ -1,0 +1,54 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    height: 70px;
+    background-color: #FFC9CA;
+    padding: 0 8px;
+}
+
+/* Agrupamento do lado esquerdo (logo + título) */
+.logoTitulo {
+    display: flex;        /* Deixa logo e título lado a lado */
+    align-items: center;
+}
+
+.imgHeader{
+    height: 60px;
+    width: 60px;
+}
+
+.titulo{
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #555555;
+}
+
+.menuHome {
+    list-style: none;     /* Remove bolinhas da lista */
+    display: flex;        /* Coloca os itens lado a lado */
+    color: #555555;
+    margin-right: 10px;
+    
+}
+
+.menuHome li{
+    margin-left: 40px;
+    cursor: pointer;
+    
+}
+
+.menuHome li a{
+    text-decoration: none;
+    color: #555555;
+}
+
+.menuHome li a:hover{
+    color: #111111;
+}
+
+.active {
+    font-weight: bold;    
+    border-bottom: 2px solid #8a2be2; /* Exemplo de destaque visual */
+    color: #111111;
+}

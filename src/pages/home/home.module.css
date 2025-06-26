@@ -1,0 +1,69 @@
+.imagemFundo {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url("../../assets/fundoTitulo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.containerTitulo {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.h1Titulo {
+    position: absolute;
+    font-size: 55px;
+    margin: 100px 10px;
+    color: #555555;
+}
+
+.botaoAgendar {
+    color: #FFF;
+    background-color: #E653B0;
+    height: 45px;
+    width: 380px;
+    font-size: 20px;
+    border-radius: 8px;
+    position: absolute;
+    margin: 250px 10px;
+}
+
+.botaoAgendar:hover {
+    background-color: #c51183;
+}
+
+.h3Titulo {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #555555;
+}
+
+.containerTexto {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.texto {
+    font-size: 19px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #777777;
+}
+
+.containerDivisaoTexto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+    margin-bottom: 100px;
+}
+
+.imagemCamila {
+    height: 440px;
+}
