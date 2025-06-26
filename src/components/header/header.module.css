@@ -1,10 +1,11 @@
 .container{
     display: flex;
     justify-content: space-between;
-    align-items: center;    
-    height: 70px;
-    background-color: #FFC9CA;
+    align-items: center;   
+    height: 70px;    
     padding: 0 8px;
+    background-color: #E3BEF2;
+    width: 100%;
 }
 
 /* Agrupamento do lado esquerdo (logo + título) */
