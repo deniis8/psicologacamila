@@ -21,7 +21,7 @@ export function Home() {
                     <img
                         className={styles.imagemCamila}
                         src={camilaPatricio}
-                        alt="Camila PAtrício"
+                        alt="Camila Patrício"
                     />
                     
                     <p className={styles.texto}>
