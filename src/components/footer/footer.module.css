@@ -4,7 +4,7 @@
     align-items: center;
     height: 27px;
     background-color: #E3BEF2;
-    /*position: fixed;*/       /* Fixa na tela */
+    position: fixed;       /* Fixa na tela */
     bottom: 0;             /* Alinha no rodapé */
     left: 0;               /* Garante que comece no canto esquerdo */
     width: 100%;
