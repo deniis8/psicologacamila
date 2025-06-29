@@ -1,8 +1,8 @@
 
 export function ErrorPage(){
     return(
-        <footer>
+        <div>
             <h1>404</h1>
-        </footer>
+        </div>
     )
 }

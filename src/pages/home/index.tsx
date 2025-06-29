@@ -10,7 +10,7 @@ export function Home() {
             <div className={styles.imagemFundo}>
                 <div className={styles.containerTitulo}>
                     <h1 className={styles.h1Titulo}>Psicóloga & <br /> Terapia Online</h1>
-                    <button className={styles.botaoAgendar}>Agendar Consulta</button>
+                    <button className={styles.botaoAgendar} onClick={() => window.open("https://wa.me/5511943660029", "_blank")}>Agendar Consulta</button>
                 </div>
             </div>
             <br />

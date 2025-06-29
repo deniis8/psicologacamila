@@ -30,6 +30,11 @@ export function Header() {
                         Contatos
                     </NavLink>
                 </li>
+                <li>
+                    <NavLink to="/perguntas" className={({ isActive }) => isActive ? styles.active : ""}>
+                        Perguntas Frequentes
+                    </NavLink>
+                </li>
             </ul>
         </header>
     )
