@@ -41,6 +41,9 @@ export function Home() {
                         Seja em sessões presenciais ou online, a psicóloga Camila Patrício oferece um ambiente acolhedor, seguro e humanizado, onde cada paciente é incentivado a construir sua própria história com mais consciência, autonomia e equilíbrio emocional.
                     </p>
                 </div>
+                <div className={styles.iconeWhatsApp}>
+                    <FaWhatsapp style={{ marginRight: "8px" } } color="#25D366" size={80} onClick={() => window.open("https://wa.me/5511943660029", "_blank")}/>
+                </div>
             </div>
             <Footer />
         </main>

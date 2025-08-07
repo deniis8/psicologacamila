@@ -67,3 +67,11 @@
 .imagemCamila {
     height: 440px;
 }
+
+.iconeWhatsApp {
+    position: fixed;
+    bottom: 100px;
+    right: 110px; 
+    padding: 10px;
+    cursor: pointer;
+}
