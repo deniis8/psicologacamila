@@ -53,3 +53,71 @@
     border-bottom: 2px solid #8a2be2; /* Exemplo de destaque visual */
     color: #111111;
 }
+
+/* Botão hamburger */
+.hamburgerButton {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555555;
+}
+
+/* Menu lateral */
+.mobileMenu {
+  position: fixed;       /* fixa sobre toda a tela */
+  top: 0;
+  right: -250px;         /* escondido inicialmente */
+  width: 250px;
+  height: 100%;
+  background-color: #E3BEF2;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+  transition: right 0.3s ease;
+  padding-top: 10px;     /* para não cobrir header */
+  z-index: 1000;         /* garante que fique acima de outros elementos */
+}
+
+/* Quando o menu estiver aberto */
+.mobileMenu.open {
+  right: 0;
+}
+
+.mobileMenu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobileMenu li {
+  margin: 20px;
+}
+
+.mobileMenu li a {
+  text-decoration: none;
+  color: #555555;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.mobileMenu li a:hover {
+  color: #111111;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 900;  /* menor que o menu, mas acima do conteúdo */
+}
+
+/* Esconde botão hamburguer em desktop */
+@media (min-width: 768px) {
+  .hamburgerButton {
+    display: none;
+  }
+  .mobileMenu {
+    display: none;
+  }
+}

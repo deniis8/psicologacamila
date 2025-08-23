@@ -2,9 +2,21 @@ import { Footer } from "../../components/footer";
 import { Header } from "../../components/header";
 import styles from "./home.module.css";
 import camilaPatricio from "../../assets/camilaPatricio.png";
+import whatsApp from "../../assets/imgWhatsApp.png";
 import { FaWhatsapp } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 export function Home() {
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, [])
+
     return (
         <main>
             <Header />
@@ -15,36 +27,66 @@ export function Home() {
                         className={styles.botaoAgendar}
                         onClick={() => window.open("https://wa.me/5511943660029", "_blank")}
                     >
-                        <FaWhatsapp style={{ marginRight: "8px" } } color="#FFF" size={23} />
+                        <FaWhatsapp style={{ marginRight: "8px" }} color="#FFF" size={23} />
                         Agendar Consulta
                     </button>
 
                 </div>
             </div>
             <br />
-            <div className={styles.containerTexto}>
 
-                <br />
-                <div className={styles.containerDivisaoTexto}>
+
+            <br />
+            {isMobile && (
+                <div >      
+                    <p className={styles.textoMobile}>
+                        <h3 className={styles.h3TituloMobile}>Conheça a Psicológa Camila Patrício</h3><br />
+                        Desde 2019, atuo na clínica psicológica, oferecendo um espaço de acolhimento, escuta qualificada e construção conjunta de caminhos para o bem-estar emocional. Meu trabalho é fundamentado em uma prática humanizada e próxima, com atendimentos voltados a crianças, adolescentes e adultos, sempre respeitando a singularidade de cada história. <br /><br />
+                        Sou pós-graduanda em Terapia Cognitivo-Comportamental e especialista em Psicologia da Saúde e Hospitalar. Ao longo da minha trajetória, mantive a clínica em paralelo a outras experiências que enriqueceram meu olhar profissional: no Conselho Tutelar, acompanhei situações de vulnerabilidade e fortalecimento familiar; já na área hospitalar, atuei em pediatria e oncologia, oferecendo suporte emocional diante de diagnósticos, tratamentos e processos de luto.<br /><br />
+                        Buscando constante atualização, realizei cursos em áreas essenciais, como prevenção ao suicídio, comunicação com crianças sobre adoecimento e morte, violência por parceiro íntimo e teorias e técnicas psicoterápicas. Essas formações complementam e fortalecem minha prática clínica, permitindo um atendimento sensível, ético e baseado em evidências.<br /><br />
+                        Meu propósito é oferecer um espaço seguro, onde cada pessoa possa se sentir compreendida, fortalecida e capaz de construir novos caminhos para sua vida com mais equilíbrio e leveza.<br /><br />
+                        “Um espaço de cuidado e escuta para que você possa compreender seus sentimentos, enfrentar desafios e construir novos caminhos com mais leveza.”
+                    </p>
+
                     <img
-                        className={styles.imagemCamila}
+                        className={styles.imagemCamilaMobile}
                         src={camilaPatricio}
                         alt="Camila Patrício"
                     />
+                </div>
+            )}
 
-                    <p className={styles.texto}>
-                        <h3 className={styles.h3Titulo}>Conheça a Psicológa Camila Patrício</h3><br />
-                        A psicóloga Camila Patrício é uma profissional apaixonada pelo desenvolvimento humano e pelo cuidado com a saúde mental. Com uma escuta sensível e um olhar atento às particularidades de cada inmainíduo, Camila constrói um espaço de acolhimento e segurança, onde o paciente pode se expressar livremente, refletir sobre sua trajetória e buscar novos caminhos para lidar com os desafios da vida.
-                        Formada em Psicologia e com especialização em abordagem clínica, Camila Patrício dedica-se ao atendimento de adolescentes, adultos e famílias, atuando com seriedade, ética e profundo respeito pela história de cada pessoa que chega até ela. Ao longo de sua carreira, tem se aprofundado em temas como ansiedade, depressão, relacionamentos interpessoais, autoestima, luto, traumas e desenvolvimento emocional.
-                        Seu trabalho é norteado pela escuta empática, pelo não julgamento e pela crença no potencial de transformação que existe em cada um de nós. Camila acredita que o processo terapêutico é uma jornada de autoconhecimento e fortalecimento interior, capaz de gerar mudanças significativas na forma como nos relacionamos conosco e com o mundo ao nosso redor.
-                        Além dos atendimentos clínicos, Camila também participa constantemente de cursos, supervisões e congressos, mantendo-se atualizada com as novas práticas e reflexões na área da psicologia. Seu compromisso com o crescimento pessoal e profissional reflete-se na qualidade do atendimento que oferece, sempre com foco no bem-estar, na escuta ética e no cuidado integral com o ser humano.
-                        Seja em sessões presenciais ou online, a psicóloga Camila Patrício oferece um ambiente acolhedor, seguro e humanizado, onde cada paciente é incentivado a construir sua própria história com mais consciência, autonomia e equilíbrio emocional.
-                    </p>
+            {!isMobile && (
+                <div className={styles.containerTexto}>
+                    <div className={styles.containerDivisaoTexto}>
+                        <img
+                            className={styles.imagemCamila}
+                            src={camilaPatricio}
+                            alt="Camila Patrício"
+                        />
+
+                        <p className={styles.texto}>
+                            <h3 className={styles.h3Titulo}>Conheça a Psicológa Camila Patrício</h3><br />
+                            Desde 2019, atuo na clínica psicológica, oferecendo um espaço de acolhimento, escuta qualificada e construção conjunta de caminhos para o bem-estar emocional. Meu trabalho é fundamentado em uma prática humanizada e próxima, com atendimentos voltados a crianças, adolescentes e adultos, sempre respeitando a singularidade de cada história. <br /><br />
+                            Sou pós-graduanda em Terapia Cognitivo-Comportamental e especialista em Psicologia da Saúde e Hospitalar. Ao longo da minha trajetória, mantive a clínica em paralelo a outras experiências que enriqueceram meu olhar profissional: no Conselho Tutelar, acompanhei situações de vulnerabilidade e fortalecimento familiar; já na área hospitalar, atuei em pediatria e oncologia, oferecendo suporte emocional diante de diagnósticos, tratamentos e processos de luto.<br /><br />
+                            Buscando constante atualização, realizei cursos em áreas essenciais, como prevenção ao suicídio, comunicação com crianças sobre adoecimento e morte, violência por parceiro íntimo e teorias e técnicas psicoterápicas. Essas formações complementam e fortalecem minha prática clínica, permitindo um atendimento sensível, ético e baseado em evidências.<br /><br />
+                            Meu propósito é oferecer um espaço seguro, onde cada pessoa possa se sentir compreendida, fortalecida e capaz de construir novos caminhos para sua vida com mais equilíbrio e leveza.<br /><br />
+                            “Um espaço de cuidado e escuta para que você possa compreender seus sentimentos, enfrentar desafios e construir novos caminhos com mais leveza.”
+                        </p>
+                    </div>
                 </div>
-                <div className={styles.iconeWhatsApp}>
-                    <FaWhatsapp style={{ marginRight: "8px" } } color="#25D366" size={80} onClick={() => window.open("https://wa.me/5511943660029", "_blank")}/>
-                </div>
+            )}
+
+            <div className={styles.iconeWhatsApp}>
+                <img
+                        className={styles.imagemWhatsApp}
+                        src={whatsApp}
+                        alt="Camila Patrício"
+                        onClick={() => window.open("https://wa.me/5511943660029", "_blank")}
+                        style={{ marginRight: "8px" }}
+                    />
             </div>
+
             <Footer />
         </main>
     )
