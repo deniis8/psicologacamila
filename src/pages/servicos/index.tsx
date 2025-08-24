@@ -1,4 +1,3 @@
-import { Footer } from "../../components/footer";
 import { Header } from "../../components/header";
 
 export function Servicos() {
@@ -6,7 +5,7 @@ export function Servicos() {
         <div>
             <Header />
             <h1>Em construção...</h1>
-            <Footer />
+            {/*<Footer />*/}
         </div>
     )
 }

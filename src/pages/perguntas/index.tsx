@@ -1,4 +1,3 @@
-import { Footer } from "../../components/footer";
 import { Header } from "../../components/header";
 
 export function Perguntas() {
@@ -8,7 +7,7 @@ export function Perguntas() {
             <div>
                 <h1>Em construção...</h1>
             </div>
-            <Footer />
+            {/*<Footer />*/}
         </main>
     )
 }
