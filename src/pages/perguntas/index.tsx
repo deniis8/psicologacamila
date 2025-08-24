@@ -6,7 +6,7 @@ export function Perguntas() {
         <main>
             <Header />
             <div>
-                <h1>Perguntas Frequentes</h1>
+                <h1>Em construção...</h1>
             </div>
             <Footer />
         </main>

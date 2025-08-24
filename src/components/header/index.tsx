@@ -42,11 +42,6 @@ export function Header() {
                         Perguntas Frequentes
                     </NavLink>
                 </li>
-                <li>
-                    <NavLink to="/contatos" className={({ isActive }) => isActive ? styles.active : ""}>
-                        Contatos
-                    </NavLink>
-                </li>
             </ul>)}
 
             {isMobile && (<>
@@ -85,11 +80,6 @@ export function Header() {
                         <li>
                             <NavLink to="/perguntas" onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? styles.active : ""}>
                                 Perguntas Frequentes
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/contatos" onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? styles.active : ""}>
-                                Contatos
                             </NavLink>
                         </li>
                     </ul>

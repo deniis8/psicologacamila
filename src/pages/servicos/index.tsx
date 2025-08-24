@@ -5,7 +5,7 @@ export function Servicos() {
     return (
         <div>
             <Header />
-            <h1>Serviços</h1>
+            <h1>Em construção...</h1>
             <Footer />
         </div>
     )

@@ -1,26 +1,22 @@
 .containerContatos {
-    width: 60%;
-    min-width: 500px;
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
+    width: 100%;
+    border: 1px solid #c51183;
     background-color: #f8eefc;
+    background-color: #E3BEF2;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);    
     font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    flex-direction: column; 
+    align-items: center;
 }
 .contatoItem {
-    display: flex;
-    align-items: center;
-    font-size: 1.7rem;
-    margin: 12px 0;
+    font-size: 15px;
+    margin: 5px;
+    color:#2b2727;
     transition: color 0.3s ease;
 }
 
 .contatoItem:hover {
-    color: #4caf50; /* Ex: muda cor ao passar o mouse */
+    color: #c51183;
+    font-size: 17px;
 }
