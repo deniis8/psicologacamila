@@ -7,6 +7,8 @@
     background-color: #E3BEF2;
     border: 1px solid #c51183;
     width: 100%;
+    position: fixed;
+    z-index: 2000; 
 }
 
 /* Agrupamento do lado esquerdo (logo + título) */

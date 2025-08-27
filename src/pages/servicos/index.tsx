@@ -4,7 +4,8 @@ export function Servicos() {
     return (
         <div>
             <Header />
-            <h1>Em construção...</h1>
+            <br/><br/><br/><br/><br/>
+                <h2>Em construção...</h2>
             {/*<Footer />*/}
         </div>
     )

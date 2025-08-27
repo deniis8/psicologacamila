@@ -1,8 +1,8 @@
 .imagemFundo {
-    position: relative;
+    position: static;
     width: 100%;
     height: 400px;
-    background-image: url("../../assets/fundoTitulo.png");
+    background-image: url("../../assets/fundoTitulo01.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

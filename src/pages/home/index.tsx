@@ -20,6 +20,7 @@ export function Home() {
     return (
         <main>
             <Header />
+            <br/><br/><br/>
             <div className={styles.imagemFundo}>
                 <div className={styles.containerTitulo}>
                     <h1 className={styles.h1Titulo}>Psicóloga & <br /> Terapia Online</h1>
