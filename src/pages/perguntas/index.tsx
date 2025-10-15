@@ -1,5 +1,5 @@
 import { Header } from "../../components/header";
-import { Contatos } from "../contatos";
+//import { Contatos } from "../contatos";
 import style from "../perguntas/perguntas.module.css";
 
 export function Perguntas() {

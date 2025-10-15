@@ -1,5 +1,5 @@
 import { Header } from "../../components/header";
-import { Contatos } from "../contatos";
+//import { Contatos } from "../contatos";
 import styles from "../servicos/servicos.module.css";
 
 export function Servicos() {
