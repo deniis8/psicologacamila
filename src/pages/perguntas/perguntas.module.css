@@ -1,6 +1,6 @@
 .h1{
     text-align: start;
-    font-size: 24px;
+    font-size: 18px;
     margin: 10px;
     color: #555555;
 }
@@ -10,4 +10,5 @@
     font-size: 15px;
     margin: 0px 10px;
     color: #777777;
+    font-style: italic;
 }

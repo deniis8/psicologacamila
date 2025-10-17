@@ -6,7 +6,7 @@ export function Servicos() {
     return (
         <div>
             <Header />
-            <br /><br /><br /><br /><br />
+            <br /><br /><br /><br />
             <h1 className={styles.h1}>Serviços</h1>
             
             <p className={styles.p}>Psicoterapia individual para adultos<br/>
