@@ -1,143 +1,170 @@
-.imagemFundo {
-    position: static;
-    width: 100%;
-    height: 400px;
-    background-image: url("../../assets/fundoTitulo01.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  background:
+    radial-gradient(circle at top left,
+      rgba(107, 143, 163, 0.12),
+      transparent 60%),
+    linear-gradient(180deg,
+      #F7F9FB 0%,
+      #EAF1F5 60%,
+      #FFFFFF 100%);
+
+  padding: 96px 16px 72px;
 }
 
 .containerTitulo {
-    width: 100%;
-    max-width: 1080px;
-    margin: 0 auto;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 .h1Titulo {
-    position: absolute;
-    font-size: 55px;
-    margin: 100px 10px;
-    color: #555555;
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #1F2A33;
+
+  max-width: 520px;
+  margin-bottom: 32px;
 }
 
 .botaoAgendar {
-    color: #FFF;
-    background-color: #E653B0;
-    height: 45px;
-    width: 380px;
-    font-size: 20px;
-    border-radius: 8px;
-    position: absolute;
-    margin: 250px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  height: 48px;
+  padding: 0 36px;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+
+  color: #FFFFFF;
+  background-color: #6B8FA3;
+  border: none;
+  border-radius: 999px;
+
+  box-shadow: 0 8px 20px rgba(107, 143, 163, 0.25);
+
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .botaoAgendar:hover {
-    background-color: #c51183;
+  background-color: #5C8194;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(107, 143, 163, 0.35);
 }
 
-.h3Titulo {
-    font-size: 24px;
-    margin-right: 10px;
-    color: #555555;
-}
+/* =========================
+   SOBRE
+========================= */
 
 .containerTexto {
-    width: 100%;
-    max-width: 1080px;
-    margin: 0 auto;
-}
-
-.texto {
-    font-size: 19px;
-    margin-left: 10px;
-    margin-right: 10px;
-    color: #777777;
+  max-width: 1080px;
+  margin: 96px auto;
+  padding: 0 16px;
 }
 
 .containerDivisaoTexto {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 55px;
-    margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 64px;
+  align-items: center;
+
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  padding: 48px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
 
 .imagemCamila {
-    height: 440px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
 }
 
-.iconeWhatsApp {
-    position: fixed;
-    bottom: 40px;
-    right: 10px;
-    padding: 10px;
-    cursor: pointer;
+.h3Titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #1F2A33;
+  margin-bottom: 16px;
 }
 
-.imagemWhatsApp {
-    height: 80px;
-    width: 80px;
+.texto {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #5F6E7A;
 }
 
-/*Mobile*/
-.h3TituloMobile {
-    font-size: 20px;
-    padding: 10px;
-    color: #555555;
-}
-
-.textoMobile {
-    font-size: 17px;
-    margin-left: 10px;
-    margin-right: 5px;
-    color: #777777;
-}
-
-.imagemCamilaMobile {
-    width: 100%;
-    /* ocupa toda a largura do container */
-    max-width: 440px;
-    /* limita o tamanho máximo */
-    height: auto;
-    /* mantém proporção */
-    display: block;
-    /* remove possíveis espaços em linha */
-    margin: 0 auto;
-    /* centraliza se o container for maior */
-    padding: 10px
-}
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 768px) {
-    .h1Titulo {
-        position: absolute;
-        font-size: 40px;
-        margin: 140px 10px;
-        color: #555555;
-    }
 
-    .botaoAgendar {
-        color: #FFF;
-        background-color: #E653B0;
-        height: 45px;
-        width: 350px;
-        font-size: 20px;
-        border-radius: 8px;
-        position: absolute;
-        margin: 250px 10px;
-    }
+  .hero {
+    padding: 72px 16px 56px;
+    text-align: center;
+  }
 
-    .iconeWhatsApp {
-        position: fixed;
-        bottom: 30px;
-        right: 10px;
-        padding: 10px;
-        cursor: pointer;
-    }
+  .containerTitulo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
 
-    .imagemWhatsApp {
-        height: 50px;
-        width: 50px;
-    }
+  .h1Titulo {
+    font-size: 30px;
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .botaoAgendar {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .containerTexto {
+    margin: 64px auto;
+  }
+
+  .containerDivisaoTexto {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  .imagemWrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .imagemCamila {
+    max-width: 300px;
+  }
+
+  .h3Titulo {
+    font-size: 24px;
+  }
+
+  .texto {
+    font-size: 16px;
+    line-height: 1.8;
+  }
 }

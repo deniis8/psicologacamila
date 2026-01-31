@@ -1,0 +1,11 @@
+.iconeWhatsApp {
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+.imagemWhatsApp {
+    height: 80px;
+    width: 80px;
+}
