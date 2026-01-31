@@ -2,37 +2,35 @@ import styles from "./contatos.module.css";
 import { FaWhatsapp, FaInstagram, FaEnvelope } from "react-icons/fa";
 
 export function Contatos() {
-    return (
-        <main>          
-            <div className={styles.containerContatos}>
-                <p
-                    className={styles.contatoItem}
-                    onClick={() => window.open("https://wa.me/5511943660029", "_blank")}
-                    style={{ cursor: "pointer" }}
-                >
-                    <FaWhatsapp style={{ marginRight: "8px" }} color="#25D366" />
-                    +55 11 94366-0029
-                </p>            
+  return (
+    <div className={styles.containerContatos}>
+      <a
+        className={styles.contatoItem}
+        href="https://wa.me/5511943660029"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaWhatsapp className={styles.icon} />
+        <span>+55 11 94366-0029</span>
+      </a>
 
-                <p
-                    className={styles.contatoItem}
-                    onClick={() => window.open("https://instagram.com/psico.camilapatricio", "_blank")}
-                    style={{ cursor: "pointer" }}
-                >
-                    <FaInstagram style={{ marginRight: "8px" }} color="#C13584" />
-                    @psico.camilapatricio
-                </p>
+      <a
+        className={styles.contatoItem}
+        href="https://instagram.com/psico.camilapatricio"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaInstagram className={styles.icon} />
+        <span>@psico.camilapatricio</span>
+      </a>
 
-                <p
-                    className={styles.contatoItem}
-                    onClick={() => window.location.href = "mailto:psico.camilapatricio@outlook.com"}
-                    style={{ cursor: "pointer" }}
-                >
-                    <FaEnvelope style={{ marginRight: "8px" }} color="#87CEFA	" />
-                    psico.camilapatricio@outlook.com
-                </p>
-            </div>
-            {/*<Footer />*/}
-        </main>
-    );
+      <a
+        className={styles.contatoItem}
+        href="mailto:psico.camilapatricio@outlook.com"
+      >
+        <FaEnvelope className={styles.icon} />
+        <span>psico.camilapatricio@outlook.com</span>
+      </a>
+    </div>
+  );
 }

@@ -54,15 +54,8 @@ export function Header() {
 
                 <nav className={`${styles.mobileMenu} ${menuOpen ? styles.open : ""}`}>
                     <button
+                        className={styles.closeButton}
                         onClick={() => setMenuOpen(false)}
-                        style={{
-                            fontSize: "30px",
-                            background: "none",
-                            border: "none",
-                            cursor: "pointer",
-                            color: "gray",  // aqui definimos a cor vermelha
-                            padding: "10px"
-                        }}
                     >
                         <FaTimes />
                     </button>

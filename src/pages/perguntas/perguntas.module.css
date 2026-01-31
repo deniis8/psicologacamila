@@ -1,14 +1,110 @@
-.h1{
-    text-align: start;
-    font-size: 18px;
-    margin: 10px;
-    color: #555555;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* =========================
+   FAQ
+========================= */
+
+.faq {
+  background: linear-gradient(
+    180deg,
+    #FFFFFF 0%,
+    #F7F9FB 100%
+  );
+  padding: 96px 16px;
 }
 
-.p{
-    text-align: start;
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  padding: 64px 72px;
+
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================
+   TÍTULO DA SEÇÃO
+========================= */
+
+.tituloSecao {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: #1F2A33;
+
+  margin-bottom: 56px;
+  text-align: center;
+}
+
+/* =========================
+   ITEM FAQ
+========================= */
+
+.item {
+  padding: 28px 0;
+  border-bottom: 1px solid #E3E8EE;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+/* =========================
+   PERGUNTA
+========================= */
+
+.pergunta {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #3A4A57;
+
+  margin-bottom: 12px;
+}
+
+/* =========================
+   RESPOSTA
+========================= */
+
+.resposta {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #5F6E7A;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+  margin-top: 56px;
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 40px 24px;
+  }
+
+  .tituloSecao {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+  .pergunta {
+    font-size: 17px;
+  }
+
+  .resposta {
     font-size: 15px;
-    margin: 0px 10px;
-    color: #777777;
-    font-style: italic;
+  }
 }
