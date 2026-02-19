@@ -1,0 +1,17 @@
+.enderecoContainer {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f5f7f9;
+  border-radius: 12px;
+}
+
+.endereco-container h3 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.endereco {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}

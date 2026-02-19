@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Header } from "../components/header";
-import { Contatos } from "../pages/contatos";
+import { Footer } from "../components/footer";
 import styles from "./layout.module.css";
 
 export function Layout() {
@@ -10,9 +10,8 @@ export function Layout() {
             
             <main className={styles.content}>
                 <Outlet />
-            </main>
-            
-            <Contatos />
+            </main>           
+            <Footer />
         </div>
     )
 }

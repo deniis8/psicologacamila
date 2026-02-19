@@ -91,6 +91,16 @@
 
 @media (max-width: 768px) {
 
+  .faq {
+  background: linear-gradient(
+    180deg,
+    #FFFFFF 0%,
+    #F7F9FB 100%
+  );
+  padding: 10px 16px;
+}
+
+
   .container {
     padding: 40px 24px;
   }

@@ -41,7 +41,8 @@
   margin: 0;
 
   display: grid;
-  grid-template-columns: 1fr; /* ✅ UMA coluna no desktop */
+  grid-template-columns: 1fr;
+  /* ✅ UMA coluna no desktop */
   gap: 16px;
 }
 
@@ -82,6 +83,10 @@
 ========================= */
 
 @media (max-width: 768px) {
+
+  .servicos {
+    padding: 10px 16px;
+  }
 
   .container {
     padding: 40px 24px;
