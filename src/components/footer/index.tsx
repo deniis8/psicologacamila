@@ -5,9 +5,13 @@ import { FaWhatsapp, FaInstagram, FaEnvelope } from "react-icons/fa";
 export function Footer() {
   return (
     <section className={styles.containerContatos}>
-
-      {/* LADO ESQUERDO — CONTATOS */}
       <div className={styles.containerInterno}>
+        <div className={styles.infoBlock}>
+          <h3 className={styles.titulo}>Entre em contato</h3>
+          <p className={styles.descricao}>
+            Estou disponível para atendimento, dúvidas e orientações.
+          </p>
+        </div>
 
         <div className={styles.coluna}>
           <a
@@ -39,11 +43,10 @@ export function Footer() {
           </a>
         </div>
       </div>
-      
+
       <div className={styles.mapaContainer}>
         <Endereco />
       </div>
-
     </section>
   );
 }
