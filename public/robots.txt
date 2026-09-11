@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /error
+
+Sitemap: https://psicologacamilapatricio.com/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /

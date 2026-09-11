@@ -2,9 +2,17 @@ import styles from "./home.module.css";
 import camilaPatricio from "../../assets/camilaPatricio.jpg";
 import { FaWhatsapp } from "react-icons/fa";
 import { ContatoWhatsApp } from "../../components/whatsapp";
+import { Helmet } from 'react-helmet-async';
 
 export function Home() {
   return (
+    <>
+      <Helmet>
+        <title>Psicóloga Camila Patrício - Psicoterapia Presencial & Online em São Paulo</title>
+        <meta name="description" content="Psicologia presencial e online com Camila Patrício. Especialista em terapia cognitivo-comportamental para crianças, adolescentes e adultos. Atendimento humanizado e qualificado." />
+        <meta property="og:title" content="Psicóloga Camila Patrício - Psicoterapia Presencial & Online" />
+        <meta property="og:description" content="Atendimento psicológico humanizado em São Paulo. Especialista em terapia cognitivo-comportamental." />
+      </Helmet>
     <main>
       {/* HERO */}
       <section className={styles.hero}>
@@ -48,5 +56,6 @@ export function Home() {
 
       <ContatoWhatsApp />
     </main>
+    </>
   );
 }

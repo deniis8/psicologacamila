@@ -1,8 +1,16 @@
 import { ContatoWhatsApp } from "../../components/whatsapp";
 import styles from "../perguntas/perguntas.module.css";
+import { Helmet } from 'react-helmet-async';
 
 export function Perguntas() {
   return (
+    <>
+      <Helmet>
+        <title>Perguntas Frequentes - Psicóterapia com Camila Patrício</title>
+        <meta name="description" content="Dúvidas frequentes sobre psicoterapia, primeira sessão, diferenças de atendimento infantil e adulto, duração e frequência das sessões com Camila Patrício." />
+        <meta property="og:title" content="Perguntas Frequentes - Psicoterapia" />
+        <meta property="og:description" content="Tire suas dúvidas sobre psicoterapia, atendimento e agendamento." />
+      </Helmet>
     <section className={styles.faq}>
       <div className={styles.container}>
         <h1 className={styles.tituloSecao}>Dúvidas Frequentes</h1>
@@ -102,5 +110,6 @@ export function Perguntas() {
         </div>
       </div>
     </section>
+    </>
   );
 }
