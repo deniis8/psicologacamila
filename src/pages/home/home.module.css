@@ -1,170 +1,175 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap');
-
 /* =========================
    HERO
 ========================= */
 
 .hero {
-  background:
-    radial-gradient(circle at top left,
-      rgba(107, 143, 163, 0.12),
-      transparent 60%),
-    linear-gradient(180deg,
-      #F7F9FB 0%,
-      #EAF1F5 60%,
-      #FFFFFF 100%);
-
-  padding: 96px 16px 72px;
+  padding: 2rem var(--margem) clamp(3rem, 8vw, 5rem);
+  overflow: hidden;
 }
 
-.containerTitulo {
-  max-width: 1080px;
+.heroConteudo {
+  display: grid;
+  gap: 2.5rem;
+  max-width: var(--largura);
   margin: 0 auto;
 }
 
-.h1Titulo {
-  font-family: 'Playfair Display', serif;
-  font-size: 52px;
-  font-weight: 700;
-  line-height: 1.15;
-  color: #1F2A33;
-
-  max-width: 520px;
-  margin-bottom: 32px;
+.heroTexto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
 }
 
-.botaoAgendar {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-
-  height: 48px;
-  padding: 0 36px;
-
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-
-  color: #FFFFFF;
-  background-color: #6B8FA3;
-  border: none;
-  border-radius: 999px;
-
-  box-shadow: 0 8px 20px rgba(107, 143, 163, 0.25);
-
-  cursor: pointer;
-  transition:
-    background-color 0.25s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+.titulo {
+  font-size: clamp(2.6rem, 5.6vw, 4.25rem);
+  letter-spacing: -0.015em;
 }
 
-.botaoAgendar:hover {
-  background-color: #5C8194;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(107, 143, 163, 0.35);
+/* Retrato: disco dividido ao meio (as duas metades do cérebro do logo) */
+.retrato {
+  position: relative;
+  width: 100%;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.halo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.meiaEsquerda,
+.meiaDireita {
+  width: 50%;
+  height: 100%;
+  animation: encontro 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.meiaEsquerda {
+  background-color: #F6C9D3;
+  border-radius: 999px 0 0 999px;
+  --deslocamento: -2.5rem;
+}
+
+.meiaDireita {
+  background-color: #C4D9F1;
+  border-radius: 0 999px 999px 0;
+  --deslocamento: 2.5rem;
+}
+
+@keyframes encontro {
+  from {
+    opacity: 0;
+    transform: translateX(var(--deslocamento));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.foto {
+  position: relative;
+  width: 82%;
+  height: auto;
+  margin: 18% 0 0 auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: 62% 12%;
+  border-radius: 1.75rem;
+  box-shadow: 0 24px 48px rgba(30, 42, 74, 0.14);
+}
+
+@media (min-width: 56rem) {
+  .hero {
+    padding-top: 4rem;
+  }
+
+  .heroConteudo {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .foto {
+    margin-top: 22%;
+    aspect-ratio: 4 / 5;
+    object-position: 78% 20%;
+  }
 }
 
 /* =========================
    SOBRE
 ========================= */
 
-.containerTexto {
-  max-width: 1080px;
-  margin: 96px auto;
-  padding: 0 16px;
+.sobre {
+  padding: clamp(4rem, 9vw, 7rem) var(--margem);
+  background-color: var(--branco);
+  border-top: 1px solid var(--linha);
 }
 
-.containerDivisaoTexto {
+.sobreGrade {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 64px;
-  align-items: center;
-
-  background-color: #FFFFFF;
-  border-radius: 24px;
-  padding: 48px;
-
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  gap: 2rem;
+  grid-template-areas:
+    "titulo"
+    "texto"
+    "citacao";
+  max-width: var(--largura);
+  margin: 0 auto;
 }
 
-.imagemCamila {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+.sobreTitulo {
+  grid-area: titulo;
+  font-size: clamp(2rem, 4.2vw, 3rem);
 }
 
-.h3Titulo {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  font-weight: 600;
-  color: #1F2A33;
-  margin-bottom: 16px;
+.sobreTexto {
+  grid-area: texto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 40rem;
+  font-size: 1.1875rem;
+  line-height: 1.75;
+  color: var(--tinta-suave);
 }
 
-.texto {
-  font-family: 'Inter', sans-serif;
-  font-size: 17px;
-  line-height: 1.7;
-  color: #5F6E7A;
+.lede {
+  font-size: 1.375rem;
+  line-height: 1.6;
+  color: var(--tinta);
 }
 
-/* =========================
-   MOBILE
-========================= */
+.citacao {
+  grid-area: citacao;
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+  border-left: 3px solid var(--rosa);
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.3rem, 2.4vw, 1.6rem);
+  line-height: 1.4;
+  text-wrap: balance;
+}
 
-@media (max-width: 768px) {
-
-  .hero {
-    padding: 72px 16px 56px;
-    text-align: center;
+@media (min-width: 56rem) {
+  .sobreGrade {
+    grid-template-columns: 1fr 1.3fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "titulo texto"
+      "citacao texto";
+    column-gap: 5rem;
+    row-gap: 2.5rem;
   }
 
-  .containerTitulo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .h1Titulo {
-    font-size: 30px;
-    max-width: 100%;
-    margin-bottom: 24px;
-  }
-
-  .botaoAgendar {
-    width: 100%;
-    max-width: 320px;
-    justify-content: center;
-  }
-
-  .containerTexto {
-    margin: 64px auto;
-  }
-
-  .containerDivisaoTexto {
-    grid-template-columns: 1fr;
-    gap: 32px;
-    padding: 32px 24px;
-    text-align: center;
-  }
-
-  .imagemWrapper {
-    display: flex;
-    justify-content: center;
-  }
-
-  .imagemCamila {
-    max-width: 300px;
-  }
-
-  .h3Titulo {
-    font-size: 24px;
-  }
-
-  .texto {
-    font-size: 16px;
-    line-height: 1.8;
+  .citacao {
+    align-self: start;
+    margin-top: 0;
   }
 }

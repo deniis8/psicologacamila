@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="#1E2A4A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <g id="hemisferio">
+      <path d="M57 19C51 10 37 10 31 19C20 18 11 27 14 38C6 43 5 57 12 63C8 73 13 86 25 87C29 97 45 99 57 92Z"/>
+      <path d="M31 19C33 27 41 29 45 36"/>
+      <path d="M14 38C22 37 28 42 32 49"/>
+      <path d="M45 36C50 41 49 49 42 53"/>
+      <path d="M12 63C21 62 27 57 31 49"/>
+      <path d="M25 87C26 77 33 72 41 73"/>
+      <path d="M41 73C46 69 47 63 44 59"/>
+      <path d="M41 73C47 78 50 84 57 85"/>
+    </g>
+  </defs>
+  <use href="#hemisferio" fill="#F08AA0"/>
+  <use href="#hemisferio" fill="#7EA6DA" transform="translate(120 0) scale(-1 1)"/>
+</svg>

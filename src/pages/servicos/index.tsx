@@ -1,6 +1,17 @@
-import { ContatoWhatsApp } from "../../components/whatsapp";
-import styles from "../servicos/servicos.module.css";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
+import styles from "./servicos.module.css";
+
+const servicos = [
+  "Psicoterapia individual para adultos",
+  "Psicoterapia infanto-juvenil (adaptada e com recursos lúdicos)",
+  "Psicoterapia on-line",
+  "Anamnese com pais ou responsáveis",
+  "Orientação parental",
+  "Visita escolar",
+  "Acompanhamento em situações de crise",
+  "Orientação psicológica breve",
+  "Avaliação psicológica",
+];
 
 export function Servicos() {
   return (
@@ -11,27 +22,20 @@ export function Servicos() {
         <meta property="og:title" content="Serviços de Psicoterapia - Camila Patrício" />
         <meta property="og:description" content="Psicoterapia individual, infantil, terapia online, orientação parental e muito mais." />
       </Helmet>
-    <section className={styles.servicos}>
-      <div className={styles.container}>
-        <h1 className={styles.h1}>Serviços</h1>
 
-        <ul className={styles.lista}>
-          <li>Psicoterapia individual para adultos</li>
-          <li>Psicoterapia infanto-juvenil (adaptada e com recursos lúdicos)</li>
-          <li>Psicoterapia on-line</li>
-          <li>Anamnese com pais ou responsáveis</li>
-          <li>Orientação parental</li>
-          <li>Visita escolar</li>
-          <li>Acompanhamento em situações de crise</li>
-          <li>Orientação psicológica breve</li>
-          <li>Avaliação psicológica</li>
-        </ul>
+      <section className={styles.servicos}>
+        <div className={styles.container}>
+          <h1 className={styles.titulo}>Serviços</h1>
 
-        <div className={styles.cta}>
-          <ContatoWhatsApp />
+          <ul className={styles.lista}>
+            {servicos.map((servico) => (
+              <li key={servico} className={styles.item}>
+                {servico}
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
-    </section>
+      </section>
     </>
   );
 }

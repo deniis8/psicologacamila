@@ -1,11 +1,26 @@
 .layout {
-    min-height: 100vh;          /* ocupa a tela inteira */
-    display: flex;
-    flex-direction: column;     /* header -> conteúdo -> footer */
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
-    flex: 1;                    /* empurra o footer para baixo */
-    padding-top: 70px; /* espaço reservado para o header fixo */
-    padding-bottom: 16px;
+  flex: 1;
+}
+
+.pularConteudo {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 3000;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--tinta);
+  color: var(--branco);
+  transform: translateY(-200%);
+}
+
+.pularConteudo:focus {
+  transform: none;
 }
