@@ -1,11 +1,22 @@
-.iconeWhatsApp {
-    position: fixed;
-    bottom: 40px;
-    right: 10px;
-    padding: 10px;
-    cursor: pointer;
+.flutuante {
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  z-index: 900;
+
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+
+  font-size: 1.85rem;
+  color: var(--branco);
+  background-color: #1BA84F;
+  box-shadow: 0 8px 22px rgba(30, 42, 74, 0.28);
+  transition: background-color 0.2s ease;
 }
-.imagemWhatsApp {
-    height: 48px;
-    width: 48px;
+
+.flutuante:hover {
+  background-color: #158a40;
 }

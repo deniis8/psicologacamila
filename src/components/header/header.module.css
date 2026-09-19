@@ -1,149 +1,154 @@
-.container {
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--nevoa);
+  border-bottom: 1px solid var(--linha);
+}
+
+.barra {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: calc(var(--largura) + 2 * var(--margem));
+  height: var(--altura-header);
+  margin: 0 auto;
+  padding: 0 var(--margem);
+  background-color: var(--nevoa);
+}
+
+/* Marca: logo + nome + profissão, como o topo de um cartão de visita */
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-right: auto;
+}
+
+.logo {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.identidade {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.nome {
+  font-family: var(--fonte-titulo);
+  font-size: 1.25rem;
+}
+
+/* Navegação desktop */
+.navDesktop,
+.agendarDesktop {
+  display: none;
+}
+
+.lista,
+.listaMobile {
+  list-style: none;
+}
+
+.link {
+  display: inline-block;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  color: var(--tinta-suave);
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--tinta);
+}
+
+.ativo {
+  color: var(--tinta);
+  border-bottom-color: var(--rosa);
+}
+
+/* Botão do menu (mobile) */
+.botaoMenu {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-right: -0.5rem;
+  font-size: 1.4rem;
+  color: var(--tinta);
+}
+
+/* Painel mobile: desce por baixo do header */
+.painel {
+  position: fixed;
+  inset: var(--altura-header) 0 0 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem var(--margem) max(2rem, env(safe-area-inset-bottom));
+  background-color: var(--nevoa);
+  transform: translateY(-1rem);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0.25s;
+}
+
+.painel.aberto {
+  transform: none;
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.linkMobile {
+  display: block;
+  padding: 1rem 0;
+  font-family: var(--fonte-titulo);
+  font-size: 1.75rem;
+  border-bottom: 1px solid var(--linha);
+}
+
+.linkMobile.ativo {
+  color: var(--rosa);
+  border-bottom-color: var(--linha);
+}
+
+@media (min-width: 56rem) {
+  .navDesktop {
+    display: block;
+  }
+
+  .lista {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    padding: 0 16px;
+    gap: 2rem;
+  }
 
-    background-color: #EAF1F5; /* Primary light */
-    border-bottom: 1px solid #E3E8EE;
+  .agendarDesktop {
+    display: inline-flex;
+  }
 
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2000;
-}
+  .botaoMenu,
+  .painel {
+    display: none;
+  }
 
-/* Logo + título */
-.logoTitulo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+  .marca {
+    margin-right: 0;
+  }
 
-.imgHeader {
-    height: 48px;
-    width: auto;
-}
+  .barra {
+    justify-content: flex-start;
+  }
 
-.titulo {
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-    font-size: 20px;
-    color: #1F2A33; /* Título principal */
-    text-decoration: none;
-}
-
-/* Menu desktop */
-.menuHome {
-    list-style: none;
-    display: flex;
-    gap: 32px;
-    margin: 0;
-    padding: 0;
-}
-
-.menuHome li a {
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    color: #3A4A57; /* Subtítulos */
-    text-decoration: none;
-    padding-bottom: 4px;
-    transition: color 0.2s ease, border-bottom 0.2s ease;
-}
-
-.menuHome li a:hover {
-    color: #1F2A33;
-}
-
-/* Link ativo */
-.active {
-    color: #1F2A33;
-    font-weight: 600;
-    border-bottom: 2px solid #6B8FA3; /* Primary */
-}
-
-/* Botão hamburger */
-.hamburgerButton {
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #3A4A57;
-}
-
-.closeButton {
-    font-size: 28px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #8A97A3;
-    padding: 12px;
-}
-
-/* Menu mobile lateral */
-.mobileMenu {
-    position: fixed;
-    top: 0;
-    right: -280px;
-    width: 280px;
-    height: 100%;
-
-    background: linear-gradient(
-        180deg,
-        #becfe0 0%,
-        #c8d2d8 60%,
-        #e6e3e3 100%
-    );
-
-    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.08);
-    transition: right 0.3s ease;
-    z-index: 1500;
-    padding-top: 20px;
-}
-
-.mobileMenu.open {
-    right: 0;
-}
-
-.mobileMenu ul {
-    list-style: none;
-    padding: 20px;
-}
-
-.mobileMenu li {
-    margin-bottom: 24px;
-}
-
-.mobileMenu li a {
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    color: #3A4A57;
-    text-decoration: none;
-}
-
-.mobileMenu li a:hover {
-    color: #1F2A33;
-}
-
-/* Overlay */
-.overlay {
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.35);
-    z-index: 1400;
-}
-
-/* Desktop */
-@media (min-width: 768px) {
-    .hamburgerButton {
-        display: none;
-    }
-
-    .mobileMenu {
-        display: none;
-    }
+  .navDesktop {
+    margin-left: auto;
+  }
 }

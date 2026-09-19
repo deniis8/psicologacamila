@@ -1,52 +1,54 @@
+import { FaEnvelope, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { contato } from "../../data/contato";
 import Endereco from "../endereco";
 import styles from "./contatos.module.css";
-import { FaWhatsapp, FaInstagram, FaEnvelope } from "react-icons/fa";
 
 export function Footer() {
   return (
-    <section className={styles.containerContatos}>
-      <div className={styles.containerInterno}>
-        <div className={styles.infoBlock}>
-          <h3 className={styles.titulo}>Entre em contato</h3>
+    <footer className={styles.rodape}>
+      <div className={styles.conteudo}>
+        <div className={styles.convite}>
+          <h2 className={styles.titulo}>Entre em contato</h2>
           <p className={styles.descricao}>
             Estou disponível para atendimento, dúvidas e orientações.
           </p>
+
+          <ul className={styles.contatos}>
+            <li>
+              <a
+                className={styles.contato}
+                href={contato.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp aria-hidden="true" />
+                WhatsApp
+              </a>
+            </li>
+            <li>
+              <a
+                className={styles.contato}
+                href={contato.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram aria-hidden="true" />
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a className={styles.contato} href={`mailto:${contato.email}`}>
+                <FaEnvelope aria-hidden="true" />
+                Email
+              </a>
+            </li>
+          </ul>
         </div>
 
-        <div className={styles.coluna}>
-          <a
-            className={styles.contatoItem}
-            href="https://wa.me/5511943660029"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-          >
-            <FaWhatsapp className={styles.icon} />
-          </a>
-
-          <a
-            className={styles.contatoItem}
-            href="https://instagram.com/psico.camilapatricio"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
-            <FaInstagram className={styles.icon} />
-          </a>
-
-          <a
-            className={styles.contatoItem}
-            href="mailto:psico.camilapatricio@outlook.com"
-            aria-label="Email"
-          >
-            <FaEnvelope className={styles.icon} />
-          </a>
+        <div className={styles.mapa}>
+          <Endereco />
         </div>
       </div>
-
-      <div className={styles.mapaContainer}>
-        <Endereco />
-      </div>
-    </section>
+    </footer>
   );
 }

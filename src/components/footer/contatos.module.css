@@ -1,145 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
-
-.containerContatos {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 24px;
-    padding: 24px 32px;
-    background: linear-gradient(135deg, #f8fbfd 0%, #dce8f0 100%);
-    font-family: 'Inter', sans-serif;
+.rodape {
+  background-color: var(--tinta);
+  color: var(--ceu-claro);
+  padding: clamp(3.5rem, 9vw, 6rem) var(--margem);
 }
 
-.containerInterno,
-.mapaContainer {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.conteudo {
+  display: grid;
+  gap: 3rem;
+  max-width: var(--largura);
+  margin: 0 auto;
 }
 
-.containerInterno {
-    padding: 22px 24px;
-    background: rgba(255, 255, 255, 0.82);
-    border: 1px solid rgba(130, 149, 167, 0.18);
-    border-radius: 20px;
-    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.05);
-    min-height: 220px;
-}
-
-.infoBlock {
-    margin-bottom: 18px;
-}
-
-.eyebrow {
-    margin: 0 0 6px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #7a8ba0;
+.convite {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
 }
 
 .titulo {
-    margin: 0 0 8px;
-    font-size: 1.2rem;
-    color: #1f2a37;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--branco);
 }
 
 .descricao {
-    margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: #5f6e7a;
+  max-width: 28rem;
+  font-size: 1.1875rem;
 }
 
-.coluna {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
+.contatos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  list-style: none;
 }
 
-.contatoItem {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 56px;
-    height: 56px;
-    border-radius: 14px;
-    background-color: #ffffff;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
-    transition: all 0.3s ease;
-    text-decoration: none;
+.contato {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 3rem;
+  padding: 0 1.25rem;
+  border-radius: 999px;
+  font-weight: 500;
+  color: var(--branco);
+  border: 1px solid rgba(221, 232, 246, 0.35);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-.contatoItem:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.08);
+.contato:hover {
+  background-color: rgba(221, 232, 246, 0.12);
+  border-color: var(--ceu-claro);
 }
 
-.icon {
-    font-size: 28px;
+.contato svg {
+  font-size: 1.25rem;
+  color: var(--ceu);
 }
 
-.contatoItem:nth-child(1) .icon {
-    color: #25D366;
+.rodape a:focus-visible {
+  outline-color: var(--rosa-claro);
 }
 
-.contatoItem:nth-child(2) .icon {
-    color: #C13584;
+@media (min-width: 56rem) {
+  .conteudo {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: stretch;
+  }
 }
 
-.contatoItem:nth-child(3) .icon {
-    color: #5F6E7A;
-}
-
-.contatoItem:hover:nth-child(1) {
-    background-color: rgba(37, 211, 102, 0.08);
-}
-
-.contatoItem:hover:nth-child(2) {
-    background-color: rgba(193, 53, 132, 0.08);
-}
-
-.contatoItem:hover:nth-child(3) {
-    background-color: rgba(95, 110, 122, 0.08);
-}
-
-.mapaContainer iframe {
-    width: 100%;
-    height: 220px;
-    border-radius: 20px;
-    border: none;
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
-}
-
-.mapaContainer {
-    min-height: 220px;
-}
-
-@media (max-width: 900px) {
-    .containerContatos {
-        flex-direction: column;
-        padding: 24px 20px;
-        gap: 20px;
-    }
-
-    .containerInterno,
-    .mapaContainer {
-        width: 100%;
-    }
-
-    .containerInterno {
-        align-items: flex-start;
-        text-align: left;
-    }
-
-    .coluna {
-        justify-content: flex-start;
-    }
-
-    .mapaContainer iframe {
-        height: 220px;
-    }
+/* Espaço para o botão flutuante não cobrir o conteúdo no fim da página */
+@media (max-width: 55.99rem) {
+  .rodape {
+    padding-bottom: 5.5rem;
+  }
 }
